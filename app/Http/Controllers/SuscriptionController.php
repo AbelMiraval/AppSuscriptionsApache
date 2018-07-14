@@ -14,10 +14,10 @@ class SuscriptionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $suscriptions = Suscription::where('user_id', auth()->user()->id)->get();
@@ -104,8 +104,4 @@ class SuscriptionController extends Controller
         //
     }
 
-    public function list(){
-        $suscriptions = Suscription::where('system_id','1')->get();
-        return response()->json($suscriptions);
-    }
-}
+ 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\System;
 use Illuminate\Http\Request;
 
+
 class SystemController extends Controller
 {
     /**
